@@ -1,0 +1,416 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+header,
+body {
+    font-family: 'Bodoni Moda', sans-serif;
+    background-color: #C9883D;
+}
+
+body {
+    margin: 0 20px;
+}
+
+/****************NAVBAR*********************/
+
+header {
+    height: 80px;
+    margin: 5px 0;
+}
+
+nav {
+    max-width: 1120px;
+    height:100%;
+    margin: 0 auto;
+}
+ 
+ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;  
+    list-style: none; 
+}
+
+ul li {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+ul img {
+    width: 60px;
+    height: 60px;
+    margin-top: 10px;
+}
+
+nav ul li {
+    display: inline-block;
+    position: relative;
+    padding-bottom: 3px;
+}
+
+nav ul li:after {
+    content: '';
+    display: block;
+    margin: auto;
+    height: 1px;
+    width: 0px;
+    background: transparent;
+    transition: width .5s ease, background-color .5s ease;
+}
+
+nav ul li:hover:after {
+    width: 100%;
+    background: #000;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #03350D;
+    font-family: 'Bodoni Moda', serif;
+}
+
+/****************PRESENTAZIONE*********************/
+
+.prima-fascia {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; 
+    height: 100vh; 
+}
+
+.prima-fascia h1 {
+    font-family: 'Bodoni Moda', serif;
+    font-size: 80px;
+    font-weight: thin;
+    color: #FFF;
+    position: absolute;
+}
+
+.prima-fascia img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/****************SPECCHIO-UP*********************/
+
+
+.specchio {
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFF;
+    height: 80vh;
+}
+
+.testo {
+    width:50%;
+    padding: 0 20px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #C9883D;
+    height: 100%;
+}
+
+.testo p {
+    font-family: sans-serif;
+    font-size: 20px;
+    text-align: center;
+}
+
+.titoletto {
+    text-transform: uppercase;  
+    padding-bottom: 20px;
+}
+
+.paragrafo p {
+    font-family: sans-serif;
+    font-size: 18px;
+}
+
+.immagine {
+    width:50%;
+    height: 100%;
+}
+
+.immagine img {
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+/****************SPECCHIO-BOTTOM*********************/
+
+
+.specchio.bottom {
+    flex-direction: row-reverse; 
+    background-color: #012709;  
+}
+
+.bottom p {
+    text-transform: uppercase;
+}
+
+.bottone {
+    margin-top: 40px;
+    text-transform: uppercase;
+    display: block;
+    border: 2px solid #C9883D;
+    padding: 10px;
+}
+
+.bottone:hover {
+    background-color: #FFF;
+}
+
+/****************FORM*********************/
+
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    
+}
+
+.form img {
+    position: absolute;
+    width:100%;
+    height: 100%;
+    object-fit:cover;
+    padding: 0 20px;
+    
+}
+
+.contenuto_form {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.descrizione {
+    margin-bottom: 50px;
+}
+
+.descrizione h2 {
+    font-size: 22px;
+    font-family: 'Bodoni Moda', serif;
+    text-align: center;
+}
+
+input#nome, input#email, input#oggetto {
+    width: 100%;
+    height: 20%;
+    margin: 0 0 20px 0;
+}
+
+textarea#message {
+    width: 100%;
+    height: 50%;
+    padding: 0 0 20px 0; 
+}
+
+
+button#invia {
+    width:100%;
+    height: 20%;
+    background-color: #03350D;
+}
+
+button#invia p {
+    color: #995505;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+/*****PROVA SLIDESHOW*******/
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+    margin-top: 50px;
+}
+  
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+
+ 
+  
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+  
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+  
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+  
+/* Caption text */
+  .text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+  
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+  
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+  
+.active, .dot:hover {
+    background-color: #717171;
+}
+  
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+  
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+/*** MAPPA ***/
+.mappa {
+    width:100%;
+    height: 400px;
+    margin-top: 50px;
+}
+
+.mappa iframe {
+    width: 100%;
+    height: 100%;
+}
+
+/*******CONTATTI********/
+.contatti {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    text-align:center;
+    justify-content: center;
+    height: 30vh;
+    background-color: #03350D;
+    margin-bottom: 20px;
+}
+
+.saluti p {
+    color: #995505;
+    font-size: 18px;
+    font-family: 'Bodoni Moda', serif;
+}
+
+.social {
+    margin-top: 10px;
+}
+
+.fab {
+    color: #995505;
+}
+
+/*********************MEDIA-QUIERY*****************************/
+@media (max-width: 1170px) {
+    nav {
+        max-width: 1000px;
+    }
+
+}
+
+@media (max-width: 780px){
+    ul li {
+        font-size: 16px;
+    }
+
+    .prima-fascia h1 {
+        font-size: 60px;
+    }
+
+    .testo p {
+        font-size: 18px;
+    }
+
+    .paragrafo p {
+        font-size: 16px;
+    }
+
+    .descrizione h2 {
+        font-size: 20px;
+    }
+}
+
+    @media (max-width: 650px){
+
+    }
+
+
+
+
+
+
+
+
+
+
+
